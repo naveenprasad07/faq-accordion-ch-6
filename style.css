@@ -93,13 +93,11 @@ button img {
 @media (max-width: 550px) {
   html {
     font-size: 50%;
-    background-color: aqua;
   }
 }
 
 @media (max-width: 400px) {
   html {
     font-size: 37.5%;
-    background-color: aqua;
   }
 }
