@@ -1,0 +1,105 @@
+:root {
+  --gray-purple: hsl(292, 16%, 49%);
+  --bacol: hsl(275, 100%, 97%);
+  --dark-purple: hsl(292, 44%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: worksans;
+  src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+html {
+  font-size: 62.5%;
+  font-family: worksans;
+}
+
+body {
+  background-color: var(--bacol);
+}
+
+.pattern {
+  height: 35vh;
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 50rem;
+  padding: 3.6rem 2.4rem;
+  border-radius: 1.3rem;
+  margin: 0 auto;
+  background-color: #fff;
+  transform: translateY(-134px);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.heading h1 {
+  font-size: 4.6rem;
+}
+
+.heading img {
+  width: 3.6rem;
+}
+
+.accordion {
+  margin-bottom: 2.4rem;
+}
+
+.accordion-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.8rem;
+}
+
+.accordion-question p {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.answer p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--gray-purple);
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+button img {
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 50%;
+    background-color: aqua;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 37.5%;
+    background-color: aqua;
+  }
+}
