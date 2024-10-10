@@ -1,12 +1,21 @@
-const plusBtn = document.querySelectorAll(".accordion-question button");
+const quesBtn = document.querySelectorAll(".accordion-question");
 
-let states = new Array(plusBtn.length).fill(true);
-plusBtn.forEach((el, i) =>
-  el.addEventListener("click", function (e) {
-    states[i] = states[i] ? false : true;
-    const target = e.target.parentElement.parentElement.nextElementSibling;
-    e.target.src = `./assets/images/icon-${states[i] ? "plus" : "minus"}.svg`;
+quesBtn.forEach((el) => el.addEventListener("click", toggle));
 
-    target.classList.toggle("hidden");
-  })
-);
+function toggle(e) {
+  const ans = this.nextSibling.nextSibling;
+
+  if (ans.classList.contains("hidden")) {
+    this.querySelector("img").setAttribute(
+      "src",
+      "./assets/images/icon-minus.svg"
+    );
+    ans.classList.remove("hidden");
+  } else {
+    this.querySelector("img").setAttribute(
+      "src",
+      "./assets/images/icon-plus.svg"
+    );
+    ans.classList.add("hidden");
+  }
+}
